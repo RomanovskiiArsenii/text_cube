@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@800&display=swap');
+
+:root {
+    --coeff: calc(1vw);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*::selection {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+main {
+    overflow: hidden;
+    height: calc(var(--coeff) * 60);
+}
+
+.cube {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    transform: translateY(50%);
+}
+
+.face {
+    font-size: calc(var(--coeff) * 10);
+    line-height: 1.25ch;
+    letter-spacing: -0.1em;
+}
+
+.left {
+    transform: rotateZ(-45deg) skew(-15deg, -10deg) scale(0.75, 2);
+}
+
+.right {
+    transform: rotateZ(-45deg) skew(-15deg, 45deg) scale(0.75, 2.03) translate(112%, -91%);
+}
+
+.bottom {
+    transform: rotateZ(35deg) skew(0deg, -35deg) scale(0.58, 1.55) translate(36%, -89%);
+}
